@@ -1,12 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Button effects</title>
-</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .flex_center {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 0px 15px;
+            margin: 20px;
+            cursor: pointer;
+            border: 1px solid black;
+            border-radius: 50px;
+        }
+
+        .btn1 {
+            background-color: transparent;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .btn1:hover {
+            box-shadow: 0 0 10px 0px #ccc inset, 0 0 20px 2px #ccc;
+        }
+
+        .btn2 {
+            background-image: linear-gradient(30deg, rgb(255, 0, 0) 50%, transparent 50%);
+            color: white;
+            background-size: 230px;
+            background-repeat: no-repeat;
+            background-position: 0%;
+            transition: 1s all;
+
+        }
+
+        .btn2:hover {
+            background-position: 100%;
+            transition: 1s ease-in-out;
+            color: black;
+            border: 3px solid white inset;
+        }
+
+        .btn3 {
+            background-color: white;
+            transition: 0.6s;
+        }
+
+        .btn3:hover {
+            border: 3px solid black inset;
+            box-shadow: 4px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn4 {
+            transition: 0.6s;
+        }
+
+        .btn4:hover {
+            animation: pluse 1s infinite;
+            transition: 0.6s;
+        }
+
+        @keyframes pluse {
+            0% {
+                scale: 1;
+            }
+
+            65% {
+                scale: 0.9;
+            }
+
+            100% {
+                scale: 1;
+            }
+        }
+
+        .outer2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: aqua;
+        }
+        .text_center{
+            text-align: center;
+        }
+        h1{
+            margin-bottom: 25px;
+        }
+    </style>
+
 <body>
-    
+    <div class="outer2">
+        <div class="outer">
+            <header>
+                <h1 class="text_center">Welcome to the world of <br> MD AFTAB ALI</h1>
+            </header>
+            <div class="flex_center">
+                <div class="btn btn1">Button 1</div>
+                <div class="btn btn2">Button 2</div>
+                <div class="btn btn3">Button 3</div>
+                <div class="btn btn4">Button 4</div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
